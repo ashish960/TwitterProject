@@ -1,0 +1,48 @@
+.container1{
+    margin:0px;
+    padding:0px;
+    display:flex;
+}
+
+.twitterImgContainer{
+    margin:0px;
+    padding:0px;
+    width:50vw;
+    height:100vh;
+    background-color:rgb(52, 128, 236);
+    color:white;
+    display:block;
+}
+
+.twitterImgContainer img{
+    margin:0px;
+    padding:0px;
+    width:20px;
+    height:20px;
+}
+
+.features{
+    width:70%;
+    margin:auto;
+    margin-top:30vh;
+    height:70%;
+    
+    
+}
+.insideFeature{
+    display:flex;
+    padding:5px;
+    font-size:1.5rem;
+}
+.insideFeature img{
+    margin-right:10px;
+    
+    height:4vh;
+}
+
+.heading{
+    margin-top:100px;
+    margin-left:20px;
+}
+
+    

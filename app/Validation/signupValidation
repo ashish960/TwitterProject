@@ -1,0 +1,42 @@
+<?php
+namespace Validation;
+session_start();
+
+class signupValidation{
+function signupValidation($data) {
+    
+    
+    $errors = [];
+    if (empty($data['name'])) {
+        $errors['names'] = 'Name is required.';
+
+    }
+
+    if (empty($data['email'])) {
+        $errors['email'] = 'Email is required.';
+    
+    } elseif (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = 'Invalid email format.';
+    }
+
+    if (empty($data['phoneno'])) {
+        $errors['phoneno'] = 'Phone number is required.';
+    
+    } elseif (!preg_match('/^[0-9]{10}$/', $data['phoneno'])) {
+        $errors['phoneno'] = 'Phone number must be 10 digits.';
+    
+    }
+    if (empty($data['password'])) {
+        $errors['passwords'] = 'Password is required.';
+    }
+
+    if (empty($data['confirm_password'])) {
+        $errors['confirm_password'] = 'Confirm password is required.';
+    } elseif ($data['password'] !== $data['confirm_password']) {
+        $errors['confirm_password'] = 'Passwords do not match.';
+    }
+    return $errors;
+}
+}
+
+?>

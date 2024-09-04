@@ -1,0 +1,29 @@
+#follows{
+    flex: 1 1 300px;
+    max-width: 25vw;
+    
+}
+
+
+
+@media screen and (max-width: 1127px) {
+    #follows {
+        display: none;
+
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    #abc {
+         align-items:flex-start;
+         
+    }
+}
+
+@media screen and (max-width: 506px) {
+    #tweetLists {
+        display: none;
+         
+    }
+}
